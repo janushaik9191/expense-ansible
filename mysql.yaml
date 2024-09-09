@@ -15,7 +15,7 @@
       ansible.builtin.pip:
         name:
         - PyMySQL 
-        executable: pip 3.9
+        executable: pip3.9
 
     - name: run and enabling mysql-server
       ansible.builtin.service:
