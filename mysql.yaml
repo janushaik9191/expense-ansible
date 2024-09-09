@@ -6,11 +6,11 @@
     login_host: mysql.meerjan.online
     mysql_login_password: ExpenseApp@1
   tasks:
-  - name: installing mysql server
+  - name: installing mysql-server
     ansible.builtin.package:
-      name: mysql server
+      name: mysql-server
       state: present
-  - name: run and enabling mysql server
+  - name: run and enabling mysql-server
     ansible.builtin.service:
       name: mysqld
       state: statrted
