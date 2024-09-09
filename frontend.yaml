@@ -30,14 +30,14 @@
 
   - name: extract the files from frontend zip files
     ansible.builtin.unarchive:
-    src: /tmp/frontend.zip
-    dest: /usr/share/nginx/html
-    remote_src: yes
+      src: /tmp/frontend.zip
+      dest: /usr/share/nginx/html
+      remote_src: yes
   
   - name: copy backend.service file for reverse proxy
     ansible.builtin.copy:
-    src: expense.conf
-    dest: /etc/nginx/default.d/expense.conf
+      src: expense.conf
+      dest: /etc/nginx/default.d/expense.conf
 
   - name: restart the nginx
     ansible,buitlin.service:
