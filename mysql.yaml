@@ -4,11 +4,18 @@
   vars:
     mysql_root_password: ExpenseApp@1
     login_host: mysql.meerjan.online
+    
   tasks:
     - name: installing mysql-server
       ansible.builtin.package:
         name: mysql-server
         state: present
+
+    - name: ansible to install pymysql
+      ansible.builtin.pip:
+      name:
+      - PyMySQL 
+
     - name: run and enabling mysql-server
       ansible.builtin.service:
         name: mysqld
