@@ -13,7 +13,7 @@
   - name: run and enabling mysql-server
     ansible.builtin.service:
       name: mysqld
-      state: statrted
+      state: started
       enabled: yes
 
   - name: connecting to mysql-server
