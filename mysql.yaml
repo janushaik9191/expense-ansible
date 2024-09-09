@@ -2,7 +2,6 @@
   hosts: mysql
   become: yes
   vars:
-    login_user: root
     login_host: mysql.meerjan.online
     mysql_login_password: ExpenseApp@1
   tasks:
@@ -18,7 +17,7 @@
 
   - name: connecting to mysql-server
     community.mysql.mysql_info:
-      login_user: "{{ login_user }}"
+      login_user: root
       login_host: "{{ login_host }}"
       mysql_login_password: "{{ mysql_login_password }}"
       ignore_errors: true
